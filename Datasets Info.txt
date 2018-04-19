@@ -1,0 +1,45 @@
+	DBpedia
+Pick 14 non-overlapping classes from DBpedia 2014
+From each randomly choose 40,000 training samples and 5,000 test samples.  Total set: 560,000 train, 70,000 test
+Classes: Company, Educational institution, artist, athlete, officeholder, mean of transportation, building, natural place,
+village, animal, plant, album, film, written work
+Concatenate title and short abstract to form single input.  
+//Length of input l0 = 1014 (for covnets i think)
+
+	Amazon Review Sentiment
+Amazon review dataset from Stanford Network Analysis Project (SNAP)
+This set spans 18 years with 34,686,770 reviews from 6,643,669 users on 2,4441,053 products
+Dataset constructed from review texts with character lengths between 100 and 1014.
+Full dataset: class) total reviews
+	1) 730,000 2)730,000 3)730,000 4)730,000 5)730,000
+Randomly chose 600,000 from each class for train and 130,000 for testing
+Total train: 3,000,000 testing:650,000
+
+Polarity Dataset:
+	1)1,275,000 2) 725,000 3)0	4)725,000 5)1,275,000
+Randomly select 1,800,000 for each positive and negative and set 200,000 for testing
+Total train: 3,600,000 and test: 400,000
+
+	Yahoo! Answers Topic Classification
+Yahoo! Webscope Program -> Yahoo! Answers Comprehensive Questions and Answers verion 1.0
+Contains 4,483,032 questions and answers
+Topic classification dataset using 10 largest main categories
+Each class contians 140,000 training, 6,000 testing
+Total train: 1,400,000 test:60,000 
+Categories: Society & Culture, Science & Math, Health, Education & Reference, Computers& Internet, Sports, Business&Finance,
+Entertainment&Music, Family & Relationships, Politics & Government
+Set input length to 1014 and truncate the rest
+Before truncation, concatenate the question title, question content, and best answer content
+
+	News Categorization English
+AG's corpus of news articles
+496,835 categorized news articles from 2000 news sources.
+Pick 4 largest categories to construct dataset, using only title and description fields
+Each class: 30,000 train, 1,900 test
+Total: 120,000 train, 7,600 test
+Classes: World, Sports, Business, Sci/Tech
+
+	News Categorization Chinese
+Classes: Sports, Finance, Entertainment, Automobile, Technology
+Train: 90,000 each, test: 12,000 each
+Total: 450,000 train, 60,000 test
